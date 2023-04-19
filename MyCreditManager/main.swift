@@ -7,4 +7,4 @@
 
 import Foundation
 
-print("Test")
+print("원하는 기능을 입력해주세요")
