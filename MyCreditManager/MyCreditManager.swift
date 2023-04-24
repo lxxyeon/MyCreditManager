@@ -29,7 +29,6 @@ class MyCreditManager{
             {
             case "1":
                 addStudent()
-                break
             case "2":
                 deleteStudent()
             case "3":
@@ -143,8 +142,28 @@ class MyCreditManager{
                     }else{
                         var sumScore = 0.0
                         for (key, value) in students[index].score{
-                            
-                            print("\(key): \(value)")
+                            switch value{
+                                case 4.5:
+                                    print("\(key): A+")
+                                case 4:
+                                    print("\(key): A")
+                                case 3.5:
+                                    print("\(key): B+")
+                                case 3:
+                                    print("\(key): B")
+                                case 2.5:
+                                    print("\(key): C+")
+                                case 2:
+                                    print("\(key): C")
+                                case 1.5:
+                                    print("\(key): D+")
+                                case 1:
+                                    print("\(key): D")
+                                case 0:
+                                    print("\(key): D")
+                                default:
+                                    break
+                            }
                             sumScore += value
                         }
                         let totalGrade = String(format: "%.2f", sumScore/Double(student.score.count))
